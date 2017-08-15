@@ -211,3 +211,5 @@ C:\Users\david\Documents\Visual Studio 2015\Projects\ToDoList-with-Tests\src\ToD
 C:\Users\david\Documents\Visual Studio 2015\Projects\ToDoList-with-Tests\src\ToDoListWithMigrations\Models\Category.cs
 C:\Users\david\Documents\Visual Studio 2015\Projects\ToDoList-with-Tests\src\ToDoListWithMigrations\Models\Item.cs
 C:\Users\david\Documents\Visual Studio 2015\Projects\ToDoList-with-Tests\src\ToDoListWithMigrations\Models\ToDoDbContext.cs
+C:\Users\david\Documents\Visual Studio 2015\Projects\ToDoList-with-Tests\src\ToDoListWithMigrations\Models\Repositories\EFItemRepository.cs
+C:\Users\david\Documents\Visual Studio 2015\Projects\ToDoList-with-Tests\src\ToDoListWithMigrations\Models\Repositories\IItemRepository.cs
