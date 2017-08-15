@@ -68,5 +68,20 @@ namespace ToDoListWithMigrations.Tests
             // Assert
             Assert.Contains<Item>(testItem, collection);
         }
+        [Fact]
+        public void DB_CreateNewEntry_Test()
+        {
+            // Arrange
+            ItemsController controller = new ItemsController(db);
+            Item testItem = new Item();
+            testItem.Description = "TestDb Item";
+
+            // Act
+            controller.Create(testItem);
+            var collection = (controller.Index() as ViewResult).ViewData.Model as IEnumerable<Item>;
+
+            // Assert
+            Assert.Contains<Item>(testItem, collection);
+        }
     }
 }
