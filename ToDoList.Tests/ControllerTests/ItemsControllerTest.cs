@@ -6,13 +6,14 @@ using Xunit;
 using Moq;
 using ToDoListWithMigrations.Models.Repositories;
 using System.Linq;
+using ToDoListWithMigrations.test.Models;
 
 namespace ToDoListWithMigrations.Tests
 {
     public class ItemsControllerTest
     {
         Mock<IItemRepository> mock = new Mock<IItemRepository>();
-
+        EFItemRepository db = new EFItemRepository(new TestDbContext());
         private void DbSetup()
         {
             mock.Setup(m => m.Items).Returns(new Item[]
@@ -82,6 +83,10 @@ namespace ToDoListWithMigrations.Tests
 
             // Assert
             Assert.Contains<Item>(testItem, collection);
+        }
+        public void Dispose()
+        {
+            db.RemoveAll(db.Items);
         }
     }
 }
